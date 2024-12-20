@@ -1,0 +1,1 @@
+# nuxt-3-vutetify-qgl-starter
