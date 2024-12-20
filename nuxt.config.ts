@@ -2,6 +2,7 @@ import vuetify from 'vite-plugin-vuetify'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 
 export default defineNuxtConfig({
+	css: ['~/assets/css/main.css'],
 	future: { compatibilityVersion: 4 },
 	build: { transpile: ['vuetify'] },
 	imports: { dirs: ['./stores'] },
@@ -10,7 +11,7 @@ export default defineNuxtConfig({
 		autoImports: true,
 		proxyCookies: true,
 		clients: {
-			default: { httpEndpoint: 'https://spacex-production.up.railway.app/' },
+			default: { httpEndpoint: process.env.GQL_URL || '' },
 		},
 	},
 
