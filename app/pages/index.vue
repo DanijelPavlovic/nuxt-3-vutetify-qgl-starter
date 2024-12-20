@@ -25,21 +25,11 @@
 	</v-container>
 </template>
 <script lang="ts" setup>
-const query = gql`
-	query getShips {
-		ships {
-			id
-			name
-			active
-		}
-	}
-`
+import { getShips } from '~/apollo/queries/spaceX-queries'
+import type { Ship } from '~/types/graphql-types'
+
 const { data } = useAsyncQuery<{
-	ships: {
-		id: string
-		name: string
-		active: boolean
-	}[]
-}>(query)
+	ships: Ship[]
+}>(getShips)
 const ships = computed(() => data.value?.ships ?? [])
 </script>

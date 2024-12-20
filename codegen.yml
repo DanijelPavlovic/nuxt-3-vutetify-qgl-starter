@@ -1,0 +1,7 @@
+schema: app/apollo/schemas/schema.graphql
+documents: 'app/apollo/**/*.ts'
+generates:
+  app/types/graphql-types.d.ts:
+    plugins:
+      - typescript
+      - typescript-operations
