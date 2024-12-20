@@ -21,7 +21,7 @@ The template has been pre-configured with state-of-the-art linters like eslint, 
 Make sure to install the dependencies:
 
 ```bash
-pnpm install
+npm install
 ```
 
 ## Development Server
@@ -29,7 +29,7 @@ pnpm install
 Start the development server on http://localhost:3000
 
 ```bash
-pnpm dev
+npm run dev
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
